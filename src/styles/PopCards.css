@@ -1,0 +1,50 @@
+.popcardContainer {
+    background-color: #FFFBEB;
+    margin-left: 300px;
+    height: 100%;
+}
+
+@media (max-width: 1100px) {
+    .popcardContainer {
+        margin-left: 0;
+    }
+}
+
+.popcardHeader {
+    padding-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.popcardTitleContainer {
+    display: flex;
+    padding: 0px 0px 0px 24px;
+    margin: 0;
+}
+
+.popcardTitle {
+    color: "#1E293B";
+    font-weight: 700;
+    font-size: 32px;
+}
+
+@media (max-width: 470px) {
+    .popcardTitle {
+        font-size: 20px;
+    }
+}
+
+.popcardDescription {
+    color: #475569;
+    font-weight: 400;
+    font-size: 16px;
+}
+
+.popcardBody {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #FFFBEB;
+}

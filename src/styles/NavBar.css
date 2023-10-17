@@ -1,0 +1,54 @@
+.topContainer {
+    padding-top: 20px;
+}
+
+.navbarDrawerHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbarPopcardLogo {
+    cursor: pointer;
+}
+
+.navbarDrawerChevron {
+    background: transparent;
+    box-shadow: none;
+    border-radius: 5px;
+    border: 1px solid #E1E3EA;
+}
+
+.navbarDrawerChevron:hover {
+    background-color: #F1F1F2;
+    box-shadow: none;
+}
+
+.listItemSelected {
+    background-color: #F3F6F9;
+}
+
+.listItemButton {
+    border-radius: 5px;
+}
+
+.listItemButton:hover {
+    background-color: #F3F6F9;
+}
+
+.listItemText {
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.sectionText {
+    font-size: 12px;
+    font-weight: 500;
+    color: #A1A5B7;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.bottomContainer {
+    padding-bottom: 20px;
+}

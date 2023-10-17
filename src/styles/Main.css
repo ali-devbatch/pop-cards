@@ -1,0 +1,16 @@
+.filterButton {
+    background-color: #FFF;
+    color: #7E8299;
+    font-size: 13px;
+    font-weight: 700;
+    box-shadow: none;
+    text-transform: none;
+    margin-right: 10px;
+    height: 40px;
+}
+
+.filterButton:hover {
+    background-color: #F1F1F2;
+    box-shadow: none;
+    text-transform: none;
+}

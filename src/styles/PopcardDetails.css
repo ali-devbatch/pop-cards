@@ -1,0 +1,22 @@
+.popcardDetailsContainer {
+    background-color: #FFFBEB;
+    margin-left: 300px;
+    min-height: 100%;
+}
+
+@media (max-width: 1100px) {
+    .popcardDetailsContainer {
+        margin-left: 0;
+    }
+}
+
+.popcardDetailsBody {
+    padding: 20px;
+    padding-right: 10px;
+}
+
+.topTabs {
+    width: 100%;
+    background-color: transparent;
+    margin-bottom: 20px
+}

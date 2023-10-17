@@ -1,0 +1,17 @@
+.signupAreaContainer {
+    width: 100%;
+}
+
+.signupArea {
+    width: 515px;
+    max-width: 515px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    @media screen and (max-width: 480px) {
+        width: 100%;
+        max-width: 100%;
+    }
+}

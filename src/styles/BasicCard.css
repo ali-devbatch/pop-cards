@@ -1,0 +1,91 @@
+.basicCardContainer {
+    display: flex;
+    padding: 30px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 27px;
+    flex-shrink: 0;
+    border-radius: 12px;
+    border: #CBD5E1;
+    background: #FFF;
+    box-shadow: none;
+    border: 1px solid #CBD5E1;
+}
+
+/* .basicCardBottomRightUp {
+    display: flex;
+    padding: 7px;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+    border-radius: 4px;
+    background:#d6fae7;
+    color: #50CD89;
+}
+
+.basicCardBottomRightDown {
+    display: flex;
+    padding: 7px;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+    border-radius: 4px;
+    color: #F1416C;
+    background: #FFF5F8;
+} */
+
+.basicCardBottomLeft {
+    color: #3F4254;
+    font-size: 34px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 34px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.basicCardBottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    gap: 10px;
+}
+
+@media (max-width: 1690px) and (min-width: 600px) {
+    .basicCardBottom {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+
+.basicCardBottomLeftLarge {
+    color: #3F4254;
+    font-size: 90%;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 34px;
+}
+
+.basicCardBottomLeftSmall {
+    color: #A1A5B7;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 14px;
+    letter-spacing: 1px;
+}
+
+.basicCardSkeleton {
+    display: flex;
+    padding: 20px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+    flex-shrink: 0;
+    border-radius: 12px;
+    border: #CBD5E1;
+    background: #FFF;
+    box-shadow: none;
+}

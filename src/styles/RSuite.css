@@ -1,0 +1,60 @@
+@import "rsuite/dist/rsuite.css";
+
+.rs-picker-toolbar-ranges {
+    display: none !important;
+}
+
+.rs-calendar-table-cell-selected .rs-calendar-table-cell-content {
+    border: #fbbf24 !important;
+    background-color: #fbbf24 !important;
+    color: black !important;
+}
+
+.rs-btn-primary {
+    background-color: #fbbf24 !important;
+}
+
+.rs-calendar-table-cell-is-today .rs-calendar-table-cell-content {
+    box-shadow: inset 0 0 0 1px #fbbf24 !important;
+}
+
+.rs-calendar-table-cell-selected .rs-calendar-table-cell-content,
+.rs-calendar-table-cell-in-range .rs-calendar-table-cell-content {
+    background-color: #fff8dd;
+}
+
+.rs-picker-toggle-value {
+    color: #7E8299 !important;
+    font-size: 13px !important;
+    font-weight: 700 !important;
+}
+
+.rs-stack-item>input {
+    color: #7E8299 !important;
+    font-size: 13px !important;
+    font-weight: 700 !important;
+}
+
+.rs-picker-menu {
+    top: 80px !important;
+}
+
+.rs-picker-menu {
+    right: 22px !important;
+    left: auto !important;
+    transform: translateX(0) !important;
+}
+
+.rs-picker-toggle-clean {
+    content: url('../assets/calender.svg') !important;
+    width: 2em !important;
+    height: 3em !important;
+}
+
+.rs-picker-date .rs-picker-toggle.rs-btn-lg .rs-picker-toggle-clean,
+.rs-picker-daterange .rs-picker-toggle.rs-btn-lg .rs-picker-toggle-clean,
+.rs-picker-date .rs-picker-toggle.rs-btn-lg .rs-picker-toggle-caret,
+.rs-picker-daterange .rs-picker-toggle.rs-btn-lg .rs-picker-toggle-caret {
+    top: 2px;
+    right: 7px;
+}

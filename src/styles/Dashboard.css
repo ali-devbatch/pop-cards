@@ -1,0 +1,136 @@
+.dashboardContainer {
+    background-color: #FFFBEB;
+    margin-left: 300px;
+    height: 100%;
+}
+
+@media (max-width: 1100px) {
+    .dashboardContainer {
+        margin-left: 0;
+    }
+}
+
+.dashboardHeader {
+    padding-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @media (max-width: 700px) {
+        flex-direction: column;
+    }
+}
+
+.dashboardTitleContainer {
+    display: flex;
+    padding-right: 0;
+
+    @media screen and (min-width: 700px) and (max-width: 1550px) {
+        max-width: 360px;
+    }
+}
+
+.dashboardTitle {
+    color: #1E293B;
+    font-weight: 700;
+    font-size: 32px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+    @media (min-width: 1550px) {
+        max-width: 420px;
+    }
+
+    @media screen and (min-width: 700px) and (max-width: 1550px) {
+        max-width: 360px;
+    }
+
+    @media (max-width: 700px) {
+        font-size: 20px;
+        max-width: 80%;
+        text-align: start;
+    }
+
+    @media (max-width: 410px) {
+        max-width: 250px;
+    }
+}
+
+@media (max-width: 470px) {
+    .dashboardTitle {
+        font-size: 20px;
+    }
+}
+
+.dashboardSubtitle {
+    color: #475569;
+    font-weight: 400;
+    font-size: 16px;
+}
+
+.dashboardFilterButtonsContainer {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-left: 0;
+}
+
+.dashboardFilterSelect {
+    height: 40px;
+}
+
+.dashboardFilterSelect>div>div>div {
+    height: 23px;
+}
+
+.dashboardDatePickersContainer {
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+
+.dashboardDatePicker {
+    background: #FFF;
+    height: 50px;
+    width: 130px;
+}
+
+.dashboardBody {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #FFFBEB;
+}
+
+.dashboardLineChartContainer {
+    padding: 0 20px 20px 0;
+}
+
+@media (max-width: 1280px) {
+    .dashboardLineChartContainer {
+        padding: 0 0px 20px 0;
+    }
+}
+
+.dashboardPieChartContainer {
+    padding-bottom: 20px;
+}
+
+.noDataFoundIllustrationLineChart {
+    background-color: #fff;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.noDataFoundIllustrationLineChartText {
+    color: #1E293B;
+    font-weight: 400;
+    font-size: 16px;
+    text-align: center;
+    font-style: italic;
+}

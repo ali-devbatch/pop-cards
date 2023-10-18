@@ -1,28 +1,133 @@
 .settingsContainer {
-  background-color: #f6f5ee;
+  background-color: #F6F5EE;
   margin-left: 300px;
   height: 100%;
 }
-
 .settingsHeader {
   display: flex;
   justify-content: space-between;
   align-items: center;
   height: 10vh;
 }
-
 .settingsFormContainer {
   margin-left: 25px;
   background-color: #fff;
   border-radius: 10px;
-  border: 1px solid #cbd5e1;
+  border: 1px solid #CBD5E1;
   padding: 25px;
   width: 95%;
-  height: 80vh;
+  height: 83vh;
+  overflow-x: scroll;
 }
-
+.buttonContainerRow {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.buttonContainer {
+  background: var(--gray-50, #F9FAFB);
+  border-radius: 8px;
+  border: 1px solid var(--gray-300, #D0D5DD);
+  padding: 5px;
+  box-shadow: 0px 1px 2px 0px rgba(16, 24, 40, 0.05);
+}
+.passwordNotificationContainer {
+  border-radius: 10px;
+border: 1.5px solid #FFBC01;
+background: #FFEEBD;
+display: flex;
+padding: 5px 90px 5px 16px;
+justify-content: flex-end;
+align-items: center;
+gap: 8px;
+}
+.passwordTypography {
+  color: var(--gray-700, #344054);
+font-size: 13px;
+font-style: normal;
+font-weight: 500;
+line-height: 18px; /* 142.857% */
+}
+.profileSettings {
+  color: #344054;
+font-size: 18px;
+font-style: normal;
+font-weight: 700;
+line-height: 14px; /* 77.778% */
+margin-top: 20px;
+}
+.settingsTitle {
+  color: #1E293B;
+  font-weight: 700;
+  font-size: 32px;
+}
+.profileDetails {
+  color: #344054;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 10px; /* 100% */
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+.nameBoxFlex {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 32px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+.nameTypo {
+  color: var(--gray-700, #344054);
+font-size: 14px;
+font-style: normal;
+font-weight: 500;
+line-height: 18px;
+width: 180px;
+}
+.nameValueTypo {
+  color: var(--gray-gray-800, #3F4254);
+font-size: 16px;
+font-style: normal;
+font-weight: 600;
+line-height: 14px; /* 100% */
+}
+.dottedLine {
+  border-top: 1px dashed #E1E3EA;
+  color:#E1E3EA;
+  height: 1px;
+  margin: 20px 0
+}
+.imageBoxFlex {
+  display: flex;
+  flex-direction: row;
+  gap: 32px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+.settingsFormContainer input {
+  height: 1rem; /* Set the desired height for all inputs */
+}
+.userSettingsImage{
+  height:1.2rem;
+  width:1.2rem;
+  margin-right:10px;
+}
+.changePasswordTypo {
+  color: #344054;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 14px; /* 77.778% */
+  margin-top: 30px;
+}
+.textField {
+  width : '500px'
+}
+// media querries
 @media (max-width: 1100px) {
-    .settingsContainer {
-        margin-left: 0;
-    }
-}
+  .settingsContainer {
+    margin-left: 0;
+  }

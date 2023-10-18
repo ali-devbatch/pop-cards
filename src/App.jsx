@@ -25,13 +25,14 @@ import { selectAccessToken, login } from "./redux/userReducer";
 import { checkWildcardRouter } from "./utils/functions";
 import { useSsoTokenMutation } from "./api/auth/authApiSlice";
 import TokenService from "./helpers/token";
+import Settings from "./components/Settings";
 
 function App() {
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const location = useLocation();
   const accessToken = useSelector(selectAccessToken);
-  const protectedRoutes = ["/dashboard", "/popcards", "/feedback"];
+  const protectedRoutes = ["/dashboard", "/popcards", "/feedback", "/settings"];
   const publicRoutes = ["/", "/signup"];
 
   const [ssoToken, { isLoading, isError, error }] = useSsoTokenMutation();
@@ -78,6 +79,7 @@ function App() {
           <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/popcards" element={<Popcards />} />
           <Route path="/feedback" element={<Feedback />} />
+          <Route path="/settings" element={<Settings />} />
           <Route path={`/popcards/:id`} element={<PopcardDetails />} />
         </Route>
         <Route path="*" element={<Navigate to="/login" replace />} />

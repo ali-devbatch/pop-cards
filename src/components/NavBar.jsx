@@ -151,14 +151,14 @@ export default function NavBar() {
         <ListItem
           key="settings"
           disablePadding
-        // onClick={hanldeListItemClick("settings")}
+        onClick={hanldeListItemClick("settings")}
         >
           <ListItemButton
             className={`
               listItemButton 
               ${navbarSelected === "settings" ? "listItemSelected" : ""}
             `}
-            disabled={true}
+            // disabled={true}
           >
             <ListItemIcon>
               <img src={settings} alt="Settings logo" />

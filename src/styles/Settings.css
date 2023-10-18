@@ -3,6 +3,9 @@
   margin-left: 300px;
   height: 100%;
 }
+.drawerContainer {
+  display: flex;
+}
 .settingsHeader {
   display: flex;
   justify-content: space-between;
@@ -24,6 +27,7 @@
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
 }
 .buttonContainer {
   background: var(--gray-50, #F9FAFB);
@@ -31,31 +35,38 @@
   border: 1px solid var(--gray-300, #D0D5DD);
   padding: 5px;
   box-shadow: 0px 1px 2px 0px rgba(16, 24, 40, 0.05);
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
 }
 .passwordNotificationContainer {
   border-radius: 10px;
-border: 1.5px solid #FFBC01;
-background: #FFEEBD;
-display: flex;
-padding: 5px 90px 5px 16px;
-justify-content: flex-end;
-align-items: center;
-gap: 8px;
+  border: 1.5px solid #FFBC01;
+  background: #FFEEBD;
+  display: flex;
+  padding: 5px 90px 5px 16px;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 8px;
 }
 .passwordTypography {
   color: var(--gray-700, #344054);
-font-size: 13px;
-font-style: normal;
-font-weight: 500;
-line-height: 18px; /* 142.857% */
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 18px; /* 142.857% */
 }
 .profileSettings {
   color: #344054;
-font-size: 18px;
-font-style: normal;
-font-weight: 700;
-line-height: 14px; /* 77.778% */
-margin-top: 20px;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 14px; /* 77.778% */
+  margin-top: 20px;
+}
+.settingProfileImg {
+  width: auto;
+  height: auto;
 }
 .settingsTitle {
   color: #1E293B;
@@ -81,24 +92,24 @@ margin-top: 20px;
 }
 .nameTypo {
   color: var(--gray-700, #344054);
-font-size: 14px;
-font-style: normal;
-font-weight: 500;
-line-height: 18px;
-width: 180px;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 18px;
+  width: 180px;
 }
 .nameValueTypo {
   color: var(--gray-gray-800, #3F4254);
-font-size: 16px;
-font-style: normal;
-font-weight: 600;
-line-height: 14px; /* 100% */
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 14px; /* 100% */
 }
 .dottedLine {
   border-top: 1px dashed #E1E3EA;
-  color:#E1E3EA;
+  color: #E1E3EA;
   height: 1px;
-  margin: 20px 0
+  margin: 20px 0;
 }
 .imageBoxFlex {
   display: flex;
@@ -108,12 +119,18 @@ line-height: 14px; /* 100% */
   margin-bottom: 15px;
 }
 .settingsFormContainer input {
-  height: 1rem; /* Set the desired height for all inputs */
+  height: 1rem;
 }
-.userSettingsImage{
-  height:1.2rem;
-  width:1.2rem;
-  margin-right:10px;
+.userSettingsImage {
+  height: 1.2rem;
+  width: 1.2rem;
+  margin-right: 10px;
+}
+.savePasswordButton {
+  display: flex;
+  justify-content: center;
+}
+.savePasswordBtn {
 }
 .changePasswordTypo {
   color: #344054;
@@ -124,10 +141,67 @@ line-height: 14px; /* 100% */
   margin-top: 30px;
 }
 .textField {
-  width : '500px'
+  width: 320px;
 }
-// media querries
+
+/* media querries  */
 @media (max-width: 1100px) {
   .settingsContainer {
     margin-left: 0;
   }
+  .nameTypo {
+    width: 40%;
+  }
+  .formWidthBox {
+    width: 100%;
+  }
+  .savePasswordButton {
+    margin-left: 0px;
+  }
+}
+@media (max-width: 1000px) {
+  .savePasswordButton {
+    margin-left: 20px;
+  }
+}
+@media (max-width: 900px) {
+  .savePasswordButton {
+    margin-left: 30px;
+  }
+}
+@media (max-width: 800px) {
+  .savePasswordButton {
+    margin-left: 50px;
+  }
+}
+@media (max-width: 700px) {
+  .passwordNotificationContainer {
+    margin-top: 20px;
+    width: 100%;
+    padding: 5px 16px 5px 16px;
+    justify-content: center;
+  }
+  .buttonContainer {
+    flex-direction: column;
+    gap: 2;
+    width: 100%;
+  }
+  .settingProfileImg {
+    width: 40px;
+    height: 40px;
+  }
+  .textField {
+    width: auto;
+  }
+}
+@media (max-width: 600px) {
+  .drawerContainer {
+    margin-left: 10px;
+  }
+  .savePasswordBtn {
+    width: 100%;
+  }
+  .savePasswordButton {
+    margin-left: 0px;
+  }
+}

@@ -21,31 +21,40 @@ import {
   setNavbarSelected,
   setNavbarOpened,
   navbarOpenedSelector,
+  userDataSelector,
 } from "../redux/userReducer";
 import { useFormik } from "formik";
 import * as Yup from "yup";
 import { useEffect } from "react";
+
 const ChangePasswordSchema = Yup.object().shape({
-  currentpassword: Yup.string().required("Password is required").min(8, 'Your password is too short.'),
-  newpassword: Yup.string().required("Password is required").min(8, 'Your password is too short.'),
-  repeatpassword: Yup.string().required('Please retype your password.')
-    .oneOf([Yup.ref('newpassword')], 'Your passwords do not match.')
+  currentpassword: Yup.string()
+    .required("Password is required")
+    .min(8, "Your password is too short."),
+  newpassword: Yup.string()
+    .required("Password is required")
+    .min(8, "Your password is too short."),
+  repeatpassword: Yup.string()
+    .required("Please retype your password.")
+    .oneOf([Yup.ref("newpassword")], "Your passwords do not match."),
 });
+
 function Settings() {
   const dispatch = useDispatch();
   const navbarOpened = useSelector(navbarOpenedSelector);
   const maxWidth1100 = useMediaQuery("(max-width:1100px)");
+  const userData = useSelector(userDataSelector);
   // formik implementation
   const formik = useFormik({
     initialValues: {
       currentpassword: "",
       newpassword: "",
-      repeatpassword: ""
+      repeatpassword: "",
     },
     validationSchema: ChangePasswordSchema,
     onSubmit: async (data) => {
-      console.log(data)
-    }
+      console.log(data);
+    },
   });
 
   // set the selected in the Navbar
@@ -59,7 +68,7 @@ function Settings() {
     <Box className="settingsContainer">
       <Grid container>
         <Grid item xs={12} className="settingsHeader">
-          <Container className="">
+          <Container className="drawerContainer">
             {maxWidth1100 && (
               <IconButton
                 color="inherit"
@@ -97,8 +106,11 @@ function Settings() {
                 size="small"
                 variant="contained"
               >
-                <Box component='img' src={userSettings} className="userSettingsImage"></Box>
-
+                <Box
+                  component="img"
+                  src={userSettings}
+                  className="userSettingsImage"
+                ></Box>
                 Account
               </Button>
               <Button
@@ -111,7 +123,7 @@ function Settings() {
                   fontWeight: 500,
                   lineHeight: "24px",
                   textTransform: "capitalize",
-                  marginLeft: "10px",
+                  // marginLeft: "10px",
                   borderRadius: "8px",
                   padding: "8px 15px 8px 8px",
                   "&:hover": {
@@ -122,8 +134,11 @@ function Settings() {
                 variant="contained"
                 startIcon={<cardForSettings />}
               >
-                <Box component='img' src={cardForSettings} className="userSettingsImage"></Box>
-
+                <Box
+                  component="img"
+                  src={cardForSettings}
+                  className="userSettingsImage"
+                ></Box>
                 Billing
               </Button>
             </Box>
@@ -142,37 +157,36 @@ function Settings() {
           </Typography>
           <Box className="nameBoxFlex">
             <Typography className="nameTypo">Name</Typography>
-            <Typography className="nameValueTypo">Olivia Rhye</Typography>
+            <Typography className="nameValueTypo">{userData?.name}</Typography>
           </Box>
           <Box className="dottedLine"></Box>
           <Box className="nameBoxFlex">
             <Typography className="nameTypo">Email Address</Typography>
-            <Typography className="nameValueTypo">Olivia@Rhyle.com</Typography>
+            <Typography className="nameValueTypo">{userData?.email}</Typography>
           </Box>
           <Box className="dottedLine"></Box>
           <Box className="imageBoxFlex">
             <Typography className="nameTypo">Your Photo</Typography>
-            <Box component="img" src={settingsProfile}>
-            </Box>
+            <Box
+              component="img"
+              className="settingProfileImg"
+              src={settingsProfile}
+            ></Box>
           </Box>
           <Box className="dottedLine"></Box>
           <Box className="nameBoxFlex">
             <Typography className="nameTypo">Account Age</Typography>
             <Typography className="nameValueTypo">288 days</Typography>
           </Box>
-          <Box
-            sx={{
-              width: "50%",
-            }}
-          >
+          <Box className="formWidthBox">
             <Typography className="changePasswordTypo">
               Change Password
             </Typography>
             <Box className="nameBoxFlex">
               <Typography className="nameTypo">Current Password</Typography>
               <TextField
-                sx={{ width: "350px" }}
-                className="textFiled"
+                // sx={{ width: "350px" }}
+                className="textField"
                 size="small"
                 id="currentpassword"
                 name="currentpassword"
@@ -181,7 +195,7 @@ function Settings() {
                 autoComplete="off"
                 value={formik.values.currentpassword}
                 onChange={(e) => {
-                  formik.setFieldValue('currentpassword', e.target.value);
+                  formik.setFieldValue("currentpassword", e.target.value);
                 }}
                 error={Boolean(formik.errors.currentpassword)}
                 helperText={formik.errors.currentpassword}
@@ -190,8 +204,8 @@ function Settings() {
             <Box className="nameBoxFlex">
               <Typography className="nameTypo">New Password</Typography>
               <TextField
-                sx={{ width: "350px" }}
-                className="textFiled"
+                // sx={{ width: "350px" }}
+                className="textField"
                 size="small"
                 id="newpassword"
                 name="newpassword"
@@ -200,7 +214,7 @@ function Settings() {
                 autoComplete="off"
                 value={formik.values.newpassword}
                 onChange={(e) => {
-                  formik.setFieldValue('newpassword', e.target.value);
+                  formik.setFieldValue("newpassword", e.target.value);
                 }}
                 error={Boolean(formik.errors.newpassword)}
                 helperText={formik.errors.newpassword}
@@ -209,8 +223,8 @@ function Settings() {
             <Box className="nameBoxFlex">
               <Typography className="nameTypo">Repeat new Password</Typography>
               <TextField
-                sx={{ width: "350px" }}
-                className="textFiled"
+                // sx={{ width: "350px" }}
+                className="textField"
                 size="small"
                 id="repeatpassword"
                 name="repeatpassword"
@@ -219,19 +233,15 @@ function Settings() {
                 autoComplete="off"
                 value={formik.values.repeatpassword}
                 onChange={(e) => {
-                  formik.setFieldValue('repeatpassword', e.target.value);
+                  formik.setFieldValue("repeatpassword", e.target.value);
                 }}
                 error={Boolean(formik.errors.repeatpassword)}
                 helperText={formik.errors.repeatpassword}
               />
             </Box>
-            <Box
-              sx={{
-                display: "flex",
-                justifyContent: "flex-end",
-              }}
-            >
+            <Box className="savePasswordButton">
               <Button
+                className="savePasswordBtn"
                 sx={{
                   background: "var(--yellow-500, #EAB308)",
                   color: "white",
